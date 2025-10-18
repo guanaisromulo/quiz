@@ -69,7 +69,7 @@ const questions = [
     },
     {
         question: "Qual propriedade CSS é usada para tornar um elemento invisível?",
-        choices: ["visibility: hidden", "display: none", "opacity: 0", "hidden: true", "Todas as anteriores"],
+        choices: ["border radius: 0px", "display: flex", "box shadow: none", "background color: #000000", "display: none"],
         correct: 4
     },
     {
@@ -231,4 +231,5 @@ function restartQuiz() {
         saveScoreBtn.disabled = true;
     }
     showScreen('jogo');
+
 }
