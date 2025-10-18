@@ -1,0 +1,188 @@
+:root {
+    background-color: rgb(235, 234, 234);
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2
+{
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5rem;
+    color: rgb(17, 19, 83);
+    font-weight: 600;
+    margin: 2rem;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem;
+}
+
+
+
+/* Utilidades */
+
+.container {
+    width: 100;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 8rem;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(imagem-fundo-quiz.jpg);
+    background-size: cover;
+}
+
+.container > *{
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+/* Telas */
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Botões */
+.btn {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem groove #cc7373;
+    border-radius: 1rem;
+    margin-bottom: 0.6rem;
+    text-decoration: none;
+    color: brown;
+    background-color: rgb(17, 19, 83);
+    transition: transform 0.15s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.btn:hover {
+    cursor: pointer; 
+    box-shadow: 0 0.25rem;
+    transform: translateY(-0.12rem);
+    transition: transform 0.1s ease;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Tela de Resultados */
+.result-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.stat {
+    padding: 0rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(33, 63, 197);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.5rem;
+    color: hsl(224, 71%, 33%);
+    font-weight: 700;
+}
+
+.performance-message {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.excellent {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 0.2rem solid #4caf50;
+}
+
+.great {
+    background-color: #d4e7df;
+    color: #4fa6ce;
+    border: 0.2rem solid #6ee7df;
+}
+.good {
+    background-color: #fff8e1;
+    color: #f57f17;
+    border: 0.2rem solid #ffc107;
+}
+
+.poor {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 0.2rem solid #f44336;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+

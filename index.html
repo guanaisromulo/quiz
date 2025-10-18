@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz webdev faci wyden</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="estilojogo.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Início -->
+        <div id="inicio" class="screen active flex-center flex-column">
+            <h1>Questionário de<br>Webdevelopment</h1>
+            <a class="btn" onclick="showScreen('jogo')">Início</a>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="jogo" class="screen justify-center flex-column">
+            <h2 id="perguntas">placeholder pegunta</h2>
+            <div class="container-escolha">
+                <p class="prefixo-escolha">A -</p>
+                <p class="texto-escolha" data-number="0">Escolha 1</p>
+            </div>
+            <div class="container-escolha">
+                <p class="prefixo-escolha">B -</p>
+                <p class="texto-escolha" data-number="1">Escolha 2</p>
+            </div>
+            <div class="container-escolha">
+                <p class="prefixo-escolha">C -</p>
+                <p class="texto-escolha" data-number="2">Escolha 3</p>
+            </div>
+            <div class="container-escolha">
+                <p class="prefixo-escolha">D -</p>
+                <p class="texto-escolha" data-number="3">Escolha 4</p>
+            </div>
+            <div class="container-escolha">
+                <p class="prefixo-escolha">E -</p>
+                <p class="texto-escolha" data-number="4">Escolha 5</p>
+            </div>
+        </div>
+
+        <!-- Tela de Resultados -->
+        <div id="resultados" class="screen flex-center flex-column">
+            <h2>Quiz Concluído!</h2>
+            <div class="result-stats">
+                <div class="stat">
+                    <div class="stat-value" id="correct-answers">0</div>
+                    <div class="stat-label">Acertos</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="wrong-answers">0</div>
+                    <div class="stat-label">Erros</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="percentage">0%</div>
+                    <div class="stat-label">Aproveitamento</div>
+                </div>
+            </div>
+            <div class="performance-message" id="performance-message">
+            </div>
+            <div class="btn-container">
+                <a class="btn" onclick="restartQuiz()">Fazer Novamente</a>
+                <a class="btn" onclick="showScreen('inicio')">Voltar ao Início</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
